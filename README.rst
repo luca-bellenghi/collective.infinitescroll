@@ -17,12 +17,10 @@ It's an unintrusive javascript and doesn't alter any of the templates.
   "next" buttons url on each ajax request.
 
 .. note::
-  The batch size is fixed to 10 items. You may have to change the init script
-  and adapt it to your needs. TODO: automatically get the batch size or always
-  use the next button's href to get the url of the next page instead of relying
-  on a page counter.
+  The batch size is taken parsing pagination links href attribute.
 
 Author
 ======
 
 Johannes Raggam, Peter Holzer, BlueDynamics Alliance <dev@bluedynamics.com>
+Luca Bellenghi <sviluppoplone@redturtle.it>
