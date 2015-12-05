@@ -14,9 +14,9 @@
 
         function calculate_batch(listingbar){
             // if we have pages, we have at least two
-            var page_links = listingbar.find('> a');
+            var page_links = listingbar.find('> a:contains("2")');
             // page 1 will always have :int=0. page 2 know the batch size!
-            return page_links[1].href.split(':int=')[1];
+            return page_links[0].href.split(':int=')[1];
         }
 
         var listingbar = $('div.listingBar');
@@ -34,7 +34,8 @@
                 nextSelector: next_button_selector,
                 itemSelector: "#content-core > *",
                 path: plone_path,
-                maxPage: max_page
+                maxPage: max_page,
+                prefill: true
             });
         };
     });
